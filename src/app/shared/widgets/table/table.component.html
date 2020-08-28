@@ -1,0 +1,14 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="notif">
+      <th mat-header-cell *matHeaderCellDef> Notifications </th>
+      <td mat-cell *matCellDef="let element"> {{element.notif}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

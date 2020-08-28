@@ -1,0 +1,43 @@
+<div class="dashboard">
+<div>
+    <!-- Line area is presented in this part -->
+
+    <app-widget-area></app-widget-area>
+</div>
+
+<br>
+<mat-divider> </mat-divider>
+
+<br>
+
+<!-- Data hard coded, widgets are presented here -->
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <app-widget-card label="New Users" total="2k" percentage="50" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Posts Count" total="1k" percentage="40" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Likes" total="8k" percentage="30" [data]="cards"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Hashtags" total="6k" percentage="20" [data]="cards"></app-widget-card>
+    </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">
+        <!-- Notifications table is presented in this part -->
+      <app-widget-table></app-widget-table>
+    </div>
+    <div fxFlex="40">
+        <!-- Pie Chart is presented in this part -->
+        <app-widget-pie></app-widget-pie>
+    </div>
+</div>
+</div>

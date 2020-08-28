@@ -1,0 +1,16 @@
+
+<!-- Default component is the common component and the entry to the entire application-->
+
+<app-header (toggleSideBarVar)="sideBarToggler($event)"></app-header>
+<!-- on click, side bar will open or close depending on previous value -->
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content> <!-- Router outlet is the directive that changes--dashboard,posts etc-->
+
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+</mat-drawer-container>
+<app-footer></app-footer>
